@@ -15,5 +15,7 @@ namespace KuznetsovAutoservice
     public partial class App : Application
     {
         public static AutoServiceKuznetsovDBEntities context = new AutoServiceKuznetsovDBEntities();
+        public static Employees currentEmployee { get; set; }
+        public static Clients currentClient { get; set; }
     }
 }

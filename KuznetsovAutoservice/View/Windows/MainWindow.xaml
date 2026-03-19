@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
         
+        <Button Name="EmployeeBtn" Grid.Row="1" Width="150" Height="75" Content="Список работников" Click="EmployeeBtn_Click"/>
+        <Button Name="ClientBtn" Grid.Row="2" Width="150" Height="75" Content="Список клиентов" Click="ClientBtn_Click"/>
+        <Button Name="SirviceBtn" Grid.Row="3" Width="150" Height="75" Content="Услуги" Click="SirviceBtn_Click"/>
+        <Button Name="OrderBtn" Grid.Row="4" Width="150" Height="75" Content="Заказы" Click="OrderBtn_Click"/>
+
+        <Frame Grid.Row="1" Grid.RowSpan="4" Grid.Column="2" Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

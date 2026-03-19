@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KuznetsovAutoservice.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace KuznetsovAutoservice.View.Windows
     /// </summary>
     public partial class AuthorizationWindow : Window
     {
+        int a = 0;
         public AuthorizationWindow()
         {
             InitializeComponent();
@@ -26,7 +28,35 @@ namespace KuznetsovAutoservice.View.Windows
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (string.IsNullOrEmpty(LoginTb.Text) && string.IsNullOrEmpty(PasswordPb.Password))
+            {
+                MessageBox.Show("Заполните все поля");
+            }
+            else
+            {
+                var user = App.context.Employees.FirstOrDefault(u => u.Login == LoginTb.Text && u.PasswordHash == PasswordPb.Password);
+                if (user != null)
+                {
+                    App.currentEmployee = user;
+                    MainWindow main = new MainWindow();
+                    main.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Пользователь не найден");
+                    LoginTb.Text = "";
+                    PasswordPb.Password = "";
+                    a += 1;
+                    if (a == 3)
+                    {
+                        MessageBox.Show("Вы были заблокированы за многократные попытки входа");
+                        LoginTb.IsEnabled = false;
+                        PasswordPb.IsEnabled = false;
+                        LoginBtn.IsEnabled = false;
+                    }
+                }
+            }
         }
     }
 }

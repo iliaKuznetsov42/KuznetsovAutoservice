@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KuznetsovAutoservice.View.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,27 @@ namespace KuznetsovAutoservice
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void EmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new EmployeePage());
+        }
+
+        private void ClientBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new ClientPage());
+        }
+
+        private void SirviceBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new ServicePage());
+        }
+
+        private void OrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new OrderPage());
         }
     }
 }

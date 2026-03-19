@@ -28,5 +28,6 @@ namespace KuznetsovAutoservice.Model
         public string Password { get; set; }
     
         public virtual ICollection<Orders> Orders { get; set; }
+        public string PasswordHash { get; internal set; }
     }
 }
