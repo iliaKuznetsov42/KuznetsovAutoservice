@@ -5,10 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:KuznetsovAutoservice.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddEmpPage">
+      d:DesignHeight="380" d:DesignWidth="590"
+      Title="AddEmpPage" Background="AliceBlue">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="70" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Имя:" Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Фамилия:" Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Должность:" Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Зарплата:" Grid.Row="7" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Логин:" Grid.Row="9" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Пароль:" Grid.Row="11" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+
+        <TextBox Name="NameTb" Grid.Row="1" Grid.Column="3" FontSize="20" Height="25"/>
+        <TextBox Name="SurnameTb" Grid.Row="3" Grid.Column="3" FontSize="20" Height="25"/>
+        <TextBox Name="PositionTb" Grid.Row="5" Grid.Column="3" FontSize="20" Height="25"/>
+        <TextBox Name="SalaryTb" Grid.Row="7" Grid.Column="3" FontSize="20" Height="25"/>
+        <TextBox Name="LoginTb" Grid.Row="9" Grid.Column="3" FontSize="20" Height="25"/>
+        <PasswordBox Name="PasswordPb" Grid.Row="11" Grid.Column="3" FontSize="20" Height="25"/>
+
+        <Button Name="AddBtn" Grid.Column="4" Grid.Row="11" Content="Добавить" Width="100" Height="40" Click="AddBtn_Click"/>
+        <Button Name="MainBtn" Grid.Column="4" Grid.Row="9" Content="Выйти в меню" Width="100" Height="40" Click="MainBtn_Click"/>
     </Grid>
 </Page>
