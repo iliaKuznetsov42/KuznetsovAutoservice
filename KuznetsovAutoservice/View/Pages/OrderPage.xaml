@@ -9,6 +9,30 @@
       Title="OrderPage" Background="AliceBlue">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+
+
+        <ListView Name="OrderLv" Grid.Row="1" Grid.RowSpan="3" Margin="10 0 10 0" FontSize="16" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="80" DisplayMemberBinding="{Binding OrderID}"/>
+                    <GridViewColumn Header="Услуга" Width="80" DisplayMemberBinding="{Binding Services.ServiceName}"/>
+                    <GridViewColumn Header="Автомобиль" Width="100" DisplayMemberBinding="{Binding Cars.Brand}"/>
+                    <GridViewColumn Header="Сотрудник" Width="100" DisplayMemberBinding="{Binding Employees.Position}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

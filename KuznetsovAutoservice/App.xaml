@@ -2,8 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:KuznetsovAutoservice"
-             StartupUri="View/Windows/MainWindow.xaml">
-    <Application.Resources>
+             StartupUri="View/Windows/AuthorizationWindow"/>
+    
+     <Application.Resources>
+         
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Cascadia Mono"/>
         </Style>
@@ -13,4 +15,4 @@
             <Setter Property="Foreground" Value="WhiteSmoke"/>
         </Style>
     </Application.Resources>
-</Application>
+

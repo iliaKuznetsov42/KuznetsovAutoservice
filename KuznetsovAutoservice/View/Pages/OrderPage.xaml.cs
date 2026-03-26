@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KuznetsovAutoservice.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace KuznetsovAutoservice.View.Pages
         public OrderPage()
         {
             InitializeComponent();
+
+            OrderLv.ItemsSource = App.context.Orders.ToList();
+        }
+
+        private void BackBrn_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

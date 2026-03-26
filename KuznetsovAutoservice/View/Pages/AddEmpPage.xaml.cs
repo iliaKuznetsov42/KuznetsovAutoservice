@@ -51,7 +51,7 @@ namespace KuznetsovAutoservice.View.Pages
 
                 App.context.Employees.Add(employees);
                 App.context.SaveChanges();
-                MessageBox.Show("Акция добавлена");
+                MessageBox.Show("Работник добавлен");
 
             }
         }

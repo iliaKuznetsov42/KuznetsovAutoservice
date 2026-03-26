@@ -23,6 +23,8 @@ namespace KuznetsovAutoservice.View.Pages
         public ClientPage()
         {
             InitializeComponent();
+
+            ClientLv.ItemsSource = App.context.Cars.ToList();
         }
 
         private void ClientLv_SelectionChanged(object sender, SelectionChangedEventArgs e)

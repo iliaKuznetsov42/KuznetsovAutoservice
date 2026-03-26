@@ -23,18 +23,16 @@
             <ColumnDefinition Width="150" />
         </Grid.ColumnDefinitions>
 
-        <Button Name="BackBtn" Grid.Column="2" Grid.Row="1" Width="140" Height="50" VerticalAlignment="Bottom" Content="Назад" Click="BackBtn_Click"/>
-
-        <ListView Name="ClientLv" Grid.Row="1" Grid.RowSpan="3" Margin="10 0 10 0" FontSize="16" SelectionChanged="ClientLv_SelectionChanged">
+        <ListView Name="ClientLv" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="10 0 10 0" FontSize="16">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Имя" Width="80" DisplayMemberBinding="{Binding FirstName}"/>
-                    <GridViewColumn Header="Фамилия" Width="80" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Телефон" Width="100" DisplayMemberBinding="{Binding Phone}"/>
-                    <GridViewColumn Header="Почта" Width="80" DisplayMemberBinding="{Binding Email}"/>
-                    <GridViewColumn Header="Марка" Width="80" DisplayMemberBinding="{Binding Cars.Brand}"/>
-                    <GridViewColumn Header="Модель" Width="80" DisplayMemberBinding="{Binding Cars.Model}"/>
-                    <GridViewColumn Header="Гос Номер" Width="80" DisplayMemberBinding="{Binding Cars.LicensePlate}"/>
+                    <GridViewColumn Header="Имя" Width="80" DisplayMemberBinding="{Binding Clients.FirstName}"/>
+                    <GridViewColumn Header="Фамилия" Width="80" DisplayMemberBinding="{Binding Clients.LastName}"/>
+                    <GridViewColumn Header="Телефон" Width="100" DisplayMemberBinding="{Binding Clients.Phone}"/>
+                    <GridViewColumn Header="Почта" Width="80" DisplayMemberBinding="{Binding Clients.Email}"/>
+                    <GridViewColumn Header="Марка" Width="80" DisplayMemberBinding="{Binding Brand}"/>
+                    <GridViewColumn Header="Модель" Width="80" DisplayMemberBinding="{Binding Model}"/>
+                    <GridViewColumn Header="Гос Номер" Width="80" DisplayMemberBinding="{Binding LicensePlate}"/>
                 </GridView>
             </ListView.View>
         </ListView>
