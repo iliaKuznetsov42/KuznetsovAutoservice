@@ -32,5 +32,6 @@
         <PasswordBox Name="PasswordPb" Grid.Row="3" Grid.Column="2" Height="25"/>
 
         <Button Name="LoginBtn" Grid.Row="5" Grid.ColumnSpan="3" Height="50" Width="150" Content="войти" FontSize="20" Click="LoginBtn_Click" />
+        <Button Name="RegBtn" Grid.Row="6" Grid.ColumnSpan="3" Height="50" Width="150" Content="регистрация" FontSize="20" Click="RegBtn_Click" />
     </Grid>
 </Window>

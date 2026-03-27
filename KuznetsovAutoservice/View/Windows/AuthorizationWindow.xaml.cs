@@ -58,5 +58,12 @@ namespace KuznetsovAutoservice.View.Windows
                 }
             }
         }
+
+        private void RegBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            Close();
+        }
     }
 }

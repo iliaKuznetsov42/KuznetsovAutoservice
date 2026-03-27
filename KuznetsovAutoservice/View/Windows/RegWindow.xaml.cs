@@ -25,9 +25,8 @@ namespace KuznetsovAutoservice.View.Windows
         {
             InitializeComponent();
 
-            PositionCmb.SelectedValuePath = "EmployeeID";
-            PositionCmb.DisplayMemberPath = "Podition";
-            PositionCmb.ItemsSource = App.context.Employees.ToList();
+
+
         }
 
         private void Зарегестрировать_Click(object sender, RoutedEventArgs e)
@@ -39,7 +38,7 @@ namespace KuznetsovAutoservice.View.Windows
         {
             if (string.IsNullOrEmpty(LoginTb.Text) && string.IsNullOrEmpty(PasswordPb.Password)
                 && string.IsNullOrEmpty(NameTb.Text) && string.IsNullOrEmpty(SalaryTb.Text)
-                && string.IsNullOrEmpty(SecondNameTb.Text) && string.IsNullOrEmpty(PositionCmb.Text))
+                && string.IsNullOrEmpty(SecondNameTb.Text) && string.IsNullOrEmpty(PositionTb.Text))
             {
                 MessageBox.Show("Заполните все поля");
             }
@@ -52,8 +51,9 @@ namespace KuznetsovAutoservice.View.Windows
                     FirstName = NameTb.Text,
                     LastName = SecondNameTb.Text,
                     Salary = Convert.ToInt32(SalaryTb.Text),
-                    Employees = PositionCmb.SelectedItem as Employees
+                    Position = PositionTb.Text
                 };
+                
                 App.context.Employees.Add(employees);
                 App.context.SaveChanges();
             }

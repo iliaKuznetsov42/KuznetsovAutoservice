@@ -39,7 +39,7 @@
 
         <TextBox Name="NameTb" Grid.Row="1" Grid.Column="2" Height="30"/>
         <TextBox Name="SecondNameTb" Grid.Row="3" Grid.Column="2" Height="30"/>
-        <ComboBox Name="PositionCmb" Grid.Row="5" Grid.Column="2" Height="30"/>
+        <TextBox Name="PositionTb" Grid.Row="5" Grid.Column="2" Height="30"/>
         <TextBox Name="LoginTb" Grid.Row="7" Grid.Column="2" Height="30"/>
         <PasswordBox Name="PasswordPb" Grid.Row="9" Grid.Column="2" Height="30"/>
         <TextBox Name="SalaryTb" Grid.Row="11" Grid.Column="2" Height="30"/>
