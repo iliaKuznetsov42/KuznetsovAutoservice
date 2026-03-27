@@ -35,7 +35,7 @@ namespace KuznetsovAutoservice.View.Pages
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            ClassFrame.MainFrame.Navigate(new Pages.AddEmpPage());
+            ClassFrame.MainFrame.Navigate(new AddEmpPage());
         }
 
         private void EmployeeLv_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -31,7 +31,7 @@ namespace KuznetsovAutoservice.View.Pages
 
         private void AddServiceBtn_Click(object sender, RoutedEventArgs e)
         {
-            ClassFrame.MainFrame.Navigate(new Pages.AddServicePage());
+            ClassFrame.MainFrame.Navigate(new View.Pages.AddServicePage());
         }
     }
 }

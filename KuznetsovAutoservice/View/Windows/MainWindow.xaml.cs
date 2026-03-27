@@ -1,4 +1,5 @@
-﻿using KuznetsovAutoservice.View.Pages;
+﻿using KuznetsovAutoservice.Class;
+using KuznetsovAutoservice.View.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace KuznetsovAutoservice
         {
             InitializeComponent();
 
+            ClassFrame.MainFrame = MainFrame;
         }
 
         private void EmployeeBtn_Click(object sender, RoutedEventArgs e)
