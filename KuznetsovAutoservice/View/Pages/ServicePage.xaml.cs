@@ -25,11 +25,13 @@ namespace KuznetsovAutoservice.View.Pages
         public ServicePage()
         {
             InitializeComponent();
+
+            ServiceLv.ItemsSource = App.context.Services.ToList();
         }
 
         private void AddServiceBtn_Click(object sender, RoutedEventArgs e)
         {
-            ClassFrame.MainFrame.Navigate(new AddServicePage());
+            ClassFrame.MainFrame.Navigate(new Pages.AddServicePage());
         }
     }
 }

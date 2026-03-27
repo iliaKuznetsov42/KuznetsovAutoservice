@@ -25,7 +25,7 @@
 
         <Button Name="AddServiceBtn" Grid.Column="2" Grid.Row="1" Width="140" Height="50" VerticalAlignment="Bottom" Content="Добавить услугу" Click="AddServiceBtn_Click"/>
 
-        <ListView Name="OrderLv" Grid.Row="1" Grid.RowSpan="3" Margin="10 0 10 0" FontSize="16">
+        <ListView Name="ServiceLv" Grid.Row="1" Grid.RowSpan="3" Margin="10 0 10 0" FontSize="16">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" Width="80" DisplayMemberBinding="{Binding ServiceID}"/>

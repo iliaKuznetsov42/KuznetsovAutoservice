@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace KuznetsovAutoservice.Class
 {
-    class ClassFrame
+     internal class ClassFrame
     {
         public static Frame MainFrame;
     }

@@ -34,7 +34,7 @@ namespace KuznetsovAutoservice.View.Windows
             }
             else
             {
-                var user = App.context.Employees.FirstOrDefault(u => u.Login == LoginTb.Text && u.PasswordHash == PasswordPb.Password);
+                var user = App.context.Employees.FirstOrDefault(u => u.Login == LoginTb.Text && u.Password == PasswordPb.Password);
                 if (user != null)
                 {
                     App.currentEmployee = user;
