@@ -44,7 +44,7 @@ namespace KuznetsovAutoservice.View.Pages
                 Services services = new Services()
                 {
                     ServiceName = NameTb.Text,
-                    Price = Convert.ToInt32(PriceTb)
+                    Price = Convert.ToInt32(PriceTb.Text)
                 };
 
 

@@ -41,13 +41,11 @@ namespace KuznetsovAutoservice.View.Pages
                     FirstName = NameTb.Text,
                     LastName = SurnameTb.Text,
                     Position = PositionTb.Text,
-                    Salary = Convert.ToInt32(SalaryTb),
+                    Salary = Convert.ToInt32(SalaryTb.Text),
                     Login = LoginTb.Text,
                     Password = PasswordPb.Password
 
                 };
-
-
 
                 App.context.Employees.Add(employees);
                 App.context.SaveChanges();

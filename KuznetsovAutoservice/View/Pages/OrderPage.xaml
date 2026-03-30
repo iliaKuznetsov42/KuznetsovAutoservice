@@ -24,6 +24,8 @@
         </Grid.ColumnDefinitions>
 
 
+        <Button Name="AddOrderBtn" Grid.Column="2" Grid.Row="1" Width="140" Height="50" VerticalAlignment="Bottom" Content="Добавить заказ" Click="AddOrderBtn_Click"/>
+        <Button Name="EditOrderBtn" Grid.Column="2" Grid.Row="3" Width="140" Height="50" VerticalAlignment="Top" Content="Редактировать заказ" Click="EditOrderBtn_Click"/>
         <ListView Name="OrderLv" Grid.Row="1" Grid.RowSpan="3" Margin="10 0 10 0" FontSize="16" >
             <ListView.View>
                 <GridView>

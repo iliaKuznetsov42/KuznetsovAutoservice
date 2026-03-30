@@ -1,0 +1,50 @@
+﻿<Page x:Class="KuznetsovAutoservice.View.Pages.EditOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KuznetsovAutoservice.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="380" d:DesignWidth="590"
+      Title="EditOrderPage" Background="AliceBlue">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="70" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Услуга:" Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Сотрудник:" Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+        <TextBlock Text="Автомобиль:" Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontSize="20" Height="25"/>
+
+
+        <ComboBox Name="ServiceCmb" Grid.Row="1" Grid.Column="3" FontSize="20" Height="25"/>
+        <ComboBox Name="EmployeeCmb" Grid.Row="3" Grid.Column="3" FontSize="20" Height="25"/>
+        <ComboBox Name="CarCmb" Grid.Row="5" Grid.Column="3" FontSize="20" Height="25"/>
+
+
+        <Button Name="EditBtn" Grid.Column="4" Grid.Row="11" Content="Добавить" Width="100" Height="40" Click="EditBtn_Click"/>
+        <Button Name="MainBtn" Grid.Column="4" Grid.Row="9" Content="Выйти в меню" Width="100" Height="40" Click="MainBtn_Click"/>
+    </Grid>
+</Page>

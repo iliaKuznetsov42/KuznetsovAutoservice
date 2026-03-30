@@ -1,4 +1,6 @@
 ﻿using KuznetsovAutoservice.Class;
+using KuznetsovAutoservice.Model;
+using KuznetsovAutoservice.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +26,42 @@ namespace KuznetsovAutoservice.View.Pages
         public OrderPage()
         {
             InitializeComponent();
+            LoadOrders();
 
+            OrderLv.ItemsSource = App.context.Orders.ToList();
+        }
+
+        private void LoadOrders()
+        {
             OrderLv.ItemsSource = App.context.Orders.ToList();
         }
 
         private void BackBrn_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void AddOrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new AddOrderPage());
+        }
+
+        private void EditOrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Orders selectedOrder = OrderLv.SelectedItem as Orders;
+            if (selectedOrder != null)
+            {
+                EditOrderWindow editOrderWindow = new EditOrderWindow(selectedOrder);
+                
+                if (editOrderWindow.ShowDialog() == true)
+                {
+                    OrderLv.ItemsSource = App.context.Orders.ToList();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Сначала выберите заказ");
+            }
         }
     }
 }
